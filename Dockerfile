@@ -3,9 +3,8 @@ FROM eclipse-temurin:17-jdk AS builder
 
 WORKDIR /app
 
-# Copia o pom.xml e o código-fonte para otimizar o cache do Docker
-COPY pom.xml .
-COPY src ./src
+# Copia todos os arquivos do projeto, incluindo o Maven Wrapper
+COPY . .
 
 # Dá permissão de execução ao Maven wrapper e compila o projeto
 RUN chmod +x ./mvnw
