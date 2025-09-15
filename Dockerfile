@@ -11,7 +11,7 @@ RUN chmod +x ./mvnw
 RUN ./mvnw clean package -DskipTests
 
 # Etapa de execução
-FROM eclipse-temurin:17-jre
+FROM eclipse-temurin:21-jre
 
 WORKDIR /app
 
